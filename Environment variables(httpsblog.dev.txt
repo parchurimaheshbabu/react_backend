@@ -1,0 +1,36 @@
+Environment variables:(https://blog.devgenius.io/why-a-env-7b4a79ba689)
+
+Environment variables provide information about the environment in which the process is running. We use Node environment variables to handle sensitive data like passwords, which we shouldn't hard code, or configuration details that might change between runs, like what port a server should listen on. In Node.
+
+
+DOTENV:
+
+Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env . Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+
+
+a dotenv is used to store “environment variables” AKA variables we need to configure our code environment. This can include information like is our project running in “production” mode or “developer” mode but most importantly, API and database keys. These variables are ones we need in order to access our project’s various services but don’t want others to be able to see and access. An example of this would include a discord bot token you created — if it was available to view in your code, anyone would be able to log in as your bot.
+
+Why use it?
+
+
+The dotenv helps to keep sensitive information secure and allows you to manage and use these variables in a consistent and organized way. Additionally, using a .env file can make it easier to share your code with others, since you can exclude the .env file from version control and have each team member or collaborator set their own environment variables.
+
+
+:::EXPLANATION ::::
+
+In Node.js, the line require("dotenv/config"); is typically used to load and configure environment variables from a .env file in your project. Here's what it does:
+
+require("dotenv/config");: This line uses the require function to include the dotenv library and immediately invokes its config method.
+
+dotenv: The dotenv library is a popular Node.js library that helps you load environment variables from a .env file into your Node.js application's environment.
+
+.config(): The config() method of dotenv is called to load the environment variables from the .env file and add them to the process.env object. This makes the variables accessible throughout your Node.js application as if they were defined in your system's environment.
+
+
+                                          ------------------------------------------------XXXXXXXXXXXXX--------------------------------------
+
+GITIGNORE:::::
+
+The .gitignore file is a helpful tool for keeping your Git repositories clean and avoiding the inclusion of unnecessary or sensitive files in your version control history. It helps ensure that only relevant source code and configuration files are tracked by Git.
+
+
